@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TRM PORTAL</title>
+    <title>Rovenheight Properties</title>
+    <link rel="icon" href="./assets/leadway-logo.svg" />
     <link rel="stylesheet" href="./styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -61,13 +62,15 @@
         <a href="#" class="flex items-center"
           ><img src="./assets/logo.png" alt="logo"
         /></a>
-        <span class="text-slate-500">TRM</span>
-        <a href="./dashboard.html" class="flex items-center justify-start gap-3"
+        <span class="text-[#7A7C87] font-semibold">TRM</span>
+        <a
+          href="./dashboard.html"
+          class="flex items-center justify-start gap-3 text-[#9FA8AF] text-[14px]"
           ><img src="./assets/overview2.svg" alt="home" />Overview</a
         >
         <a
           href="./requestinspectionlist.html"
-          class="flex items-center justify-start gap-3 text-[#FF7A00]"
+          class="flex items-center justify-start gap-3 text-[14px] text-[#FF7A00]"
           ><img src="./assets/requests2.svg" alt="home" />Requests</a
         >
       </div>
@@ -78,15 +81,21 @@
           class="flex justify-between lg:justify-end items-center border-b border-[#EEEEEE]"
         >
           <div class="w-[30px] h-[auto] ml-7 lg:hidden">
-            <img src="./assets/leadway-logo.svg" alt="leadway-logo" />
+            <a href="./dashboard.html">
+              <img src="./assets/leadway-logo.svg" alt="leadway-logo"
+            /></a>
           </div>
 
           <div class="flex items-center justify-end gap-4 p-4">
-            <a href="#"
+            <a href="#" class="w-[20px] h-[20px]"
               ><img src="./assets/notificationbell.svg" alt="home"
             /></a>
-            <a href="#"><img src="./assets/avatar.svg" alt="home" /></a>
-            <span class="">Adesola</span>
+
+            <a href="#" class="w-[24px] h-[24px]"
+              ><img src="./assets/avatar.svg" alt="home"
+            /></a>
+            <span class="text-[12px]">Adesola</span>
+
             <a href="#"><img src="./assets/caret.svg" alt="home" /></a>
 
             <div class="w-[20px] h-[auto] lg:hidden">
@@ -301,17 +310,21 @@
       <!-- SIDE BAR 2 -->
       <div
         id="sidebarTwo"
-        class="w-52 hidden flex-col items-start justify-start pt-12 p-5 gap-5 border border-[#EEEEEE] bg-[#fff]"
+        class="w-[180px] hidden flex flex-col items-start justify-start pt-12 p-5 gap-5 border border-[#EEEEEE] bg-[#fff]"
       >
-        <a href="#" class="flex items-center"
+        <a href="./dashboard.html" class="flex items-center"
           ><img src="./assets/logo.png" alt="logo"
         /></a>
         <span class="text-slate-500">TRM</span>
-        <a href="#" class="flex items-center justify-start gap-3 text-[#FF7A00]"
-          ><img src="./assets/overview.svg" alt="home" />Overview</a
+        <a
+          href="./dashboard.html"
+          class="flex items-center justify-start gap-3 text-[14px] text-[#9FA8AF]"
+          ><img src="./assets/overview2.svg" alt="home" />Overview</a
         >
-        <a href="#" class="flex items-center justify-start gap-3"
-          ><img src="./assets/requests.svg" alt="home" />Requests</a
+        <a
+          href="./requestinspectionlist.html"
+          class="flex items-center justify-start gap-3 text-[14px] text-[#FF7A00]"
+          ><img src="./assets/requests2.svg" alt="home" />Requests</a
         >
       </div>
     </div>

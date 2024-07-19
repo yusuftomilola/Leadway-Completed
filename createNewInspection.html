@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TRM PORTAL</title>
+    <title>Create New Inspection | Leadway Assurance</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="./assets/leadway-logo.svg" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./script/completedinspectionlist.js" defer></script>
     <script src="./script/dashboard.js" defer></script>
@@ -29,16 +30,18 @@
       <div
         class="w-52 hidden lg:flex flex-col items-start justify-start pt-12 p-5 gap-5 border border-[#EEEEEE]"
       >
-        <a href="#" class="flex items-center"
+        <a href="./dashboard.html" class="flex items-center"
           ><img src="./assets/logo.png" alt="logo"
         /></a>
-        <span class="text-slate-500">TRM</span>
-        <a href="./dashboard.html" class="flex items-center justify-start gap-3"
+        <span class="text-[#7A7C87] font-semibold">TRM</span>
+        <a
+          href="./dashboard.html"
+          class="flex items-center justify-start gap-3 text-[#9FA8AF] text-[14px]"
           ><img src="./assets/overview2.svg" alt="home" />Overview</a
         >
         <a
           href="./requestinspectionlist.html"
-          class="flex items-center justify-start gap-3 text-[#FF7A00]"
+          class="flex items-center justify-start gap-3 text-[14px] text-[#FF7A00]"
           ><img src="./assets/requests2.svg" alt="home" />Requests</a
         >
       </div>
@@ -49,15 +52,21 @@
           class="flex justify-between lg:justify-end items-center border-b border-[#EEEEEE]"
         >
           <div class="w-[30px] h-[auto] ml-7 lg:hidden">
-            <img src="./assets/leadway-logo.svg" alt="leadway-logo" />
+            <a href="./dashboard.html">
+              <img src="./assets/leadway-logo.svg" alt="leadway-logo"
+            /></a>
           </div>
 
           <div class="flex items-center justify-end gap-4 p-4">
-            <a href="#"
+            <a href="#" class="w-[20px] h-[20px]"
               ><img src="./assets/notificationbell.svg" alt="home"
             /></a>
-            <a href="#"><img src="./assets/avatar.svg" alt="home" /></a>
-            <span class="">Adesola</span>
+
+            <a href="#" class="w-[24px] h-[24px]"
+              ><img src="./assets/avatar.svg" alt="home"
+            /></a>
+            <span class="text-[12px]">Adesola</span>
+
             <a href="#"><img src="./assets/caret.svg" alt="home" /></a>
 
             <div class="w-[20px] h-[auto] lg:hidden">
@@ -79,7 +88,9 @@
           >
             <!-- Inspection List Heading Container -->
             <div class="flex flex-col">
-              <h1 class="text-[#34475E] text-xl">Create New Inspection</h1>
+              <h1 class="text-[#34475E] text-xl font-bold">
+                Create New Inspection
+              </h1>
               <p class="text-[#2F2F2F] text-xs">
                 See Inspections across all business classes
               </p>
@@ -128,10 +139,12 @@
 
                 <!-- choose a class container -->
                 <div class="flex flex-col gap-3">
-                  <label for="class">Choose a class</label>
+                  <label for="class" class="text-[14px] text-[#34475E]"
+                    >Choose a class</label
+                  >
 
                   <div class="custom-select-wrapper">
-                    <select class="custom-select">
+                    <select class="custom-select" id="selectProperty">
                       <option value="property" data-color="#6A0DAD">
                         🔵 Property
                         <span><img src="./assets/downarrow.svg" alt="" /></span>
@@ -197,17 +210,21 @@
       <!-- SIDE BAR 2 -->
       <div
         id="sidebarTwo"
-        class="w-52 hidden flex-col items-start justify-start pt-12 p-5 gap-5 border border-[#EEEEEE] bg-[#fff]"
+        class="w-[180px] hidden flex flex-col items-start justify-start pt-12 p-5 gap-5 border border-[#EEEEEE] bg-[#fff]"
       >
-        <a href="#" class="flex items-center"
+        <a href="./dashboard.html" class="flex items-center"
           ><img src="./assets/logo.png" alt="logo"
         /></a>
         <span class="text-slate-500">TRM</span>
-        <a href="#" class="flex items-center justify-start gap-3 text-[#FF7A00]"
-          ><img src="./assets/overview.svg" alt="home" />Overview</a
+        <a
+          href="./dashboard.html"
+          class="flex items-center justify-start gap-3 text-[14px] text-[#9FA8AF]"
+          ><img src="./assets/overview2.svg" alt="home" />Overview</a
         >
-        <a href="#" class="flex items-center justify-start gap-3"
-          ><img src="./assets/requests.svg" alt="home" />Requests</a
+        <a
+          href="./requestinspectionlist.html"
+          class="flex items-center justify-start gap-3 text-[14px] text-[#FF7A00]"
+          ><img src="./assets/requests2.svg" alt="home" />Requests</a
         >
       </div>
     </div>
@@ -216,11 +233,25 @@
       const preloss = document.querySelector(".preloss");
       const postloss = document.querySelector(".postloss");
       let createRequest = document.querySelector(".createRequestBtn");
-      const closeNewInspection = document.querySelector(".closeNewInspection");
       const createRequestLink = document.getElementById("createRequestLink");
-      const closeNewInspectionBtn = document.getElementById(
-        "closeNewInspectionBtn"
-      );
+      const selectedProperty = document.getElementById("selectProperty");
+      const initialBorder = "1px solid #EEEEEE";
+      const border = "1px solid #FF7A00";
+
+      function updateHref() {
+        const value = selectedProperty.value;
+        if (preloss.classList.contains("showw")) {
+          createRequestLink.href =
+            value === "property" || value === "motors"
+              ? `./preloss-${value}.html`
+              : "";
+        } else if (postloss.classList.contains("showw")) {
+          createRequestLink.href =
+            value === "property" || value === "motors"
+              ? `./postloss-${value}.html`
+              : "";
+        }
+      }
 
       preloss.addEventListener("click", () => {
         if (
@@ -234,7 +265,7 @@
           postloss.classList.add("hiddenn");
 
           createRequest.style.backgroundColor = "#FF7A00";
-          createRequestLink.href = "./preloss.html";
+          updateHref();
         }
       });
 
@@ -250,9 +281,19 @@
           preloss.classList.add("hiddenn");
 
           createRequest.style.backgroundColor = "#FF7A00";
-          createRequestLink.href = "./postloss.html";
+          updateHref();
         }
       });
+
+      selectedProperty.addEventListener("change", () => {
+        updateHref();
+        createRequest.style.backgroundColor = "#FF7A00";
+      });
+
+      const closeNewInspection = document.querySelector(".closeNewInspection");
+      const closeNewInspectionBtn = document.getElementById(
+        "closeNewInspectionBtn"
+      );
 
       closeNewInspection.addEventListener("click", () => {
         if (

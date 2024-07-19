@@ -9,7 +9,7 @@ body {
   cursor: pointer;
 }
 
-/* "SEND TO TRM" MODAL BOX */
+/* "SEND TO TRM" MODAL BOX - 1ST MODAL*/
 .hidden {
   display: none;
 }
@@ -50,7 +50,7 @@ body {
   z-index: 5;
 }
 
-/* "You've successfully created new inspection Notification" MODAL BOX */
+/* "You've successfully created new inspection Notification" 2ND MODAL BOX */
 .modal2 {
   position: absolute;
   top: 50%;

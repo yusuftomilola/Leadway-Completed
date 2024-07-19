@@ -111,14 +111,14 @@ dashboardTableData.forEach((item) => {
     <tr>
                   <td class="p-4 border-b border-blue-gray-50">
                     <p
-                      class="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal"
+                      class="block antialiased font-sans text-[12px] leading-normal text-[#2F2F2F] font-normal"
                     >
                       ${item.ID}
                     </p>
                   </td>
                   <td class="p-4 border-b border-blue-gray-50">
                     <p
-                      class="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal"
+                      class="block antialiased font-sans text-[12px] leading-normal text-[#2F2F2F] font-normal"
                     >
                     ${item.Name}
                     </p>
@@ -129,7 +129,7 @@ dashboardTableData.forEach((item) => {
                         item.elipseColor
                       }]"></span>
                       <p
-                        class="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal"
+                        class="block antialiased font-sans text-[12px] leading-normal text-[#2F2F2F] font-normal"
                       >
                       ${item.Class}
                       </p>
@@ -137,14 +137,14 @@ dashboardTableData.forEach((item) => {
                   </td>
                   <td class="p-4 border-b border-blue-gray-50">
                     <p
-                      class="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal"
+                      class="block antialiased font-sans text-[12px] leading-normal text-[#2F2F2F] font-normal"
                     >
                     ${item["Inspection method"]}
                     </p>
                   </td>
                   <td class="p-4 border-b border-blue-gray-50">
                     <p
-                      class="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal"
+                      class="block antialiased font-sans text-[12px] leading-normal text-[#2F2F2F] font-normal"
                     >
                     ${item.Officer}
                     </p>
@@ -152,7 +152,7 @@ dashboardTableData.forEach((item) => {
                   <td class="p-4 border-b border-blue-gray-50">
                   
                     <p
-                      class="block antialiased font-sans text-sm leading-normal text-[${
+                      class="block antialiased font-sans text-[12px] leading-normal text-[${
                         item.btn_text_color
                       }] font-normal py-1 bg-[${
     item.btn_padding_color

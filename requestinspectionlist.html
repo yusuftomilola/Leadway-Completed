@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TRM PORTAL</title>
+    <title>Inspection List</title>
+    <link rel="icon" href="./assets/leadway-logo.svg" />
     <link rel="stylesheet" href="./styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -58,16 +59,18 @@
       <div
         class="w-52 hidden lg:flex flex-col items-start justify-start pt-12 p-5 gap-5 border border-[#EEEEEE]"
       >
-        <a href="#" class="flex items-center"
+        <a href="/dashboard.html" class="flex items-center"
           ><img src="./assets/logo.png" alt="logo"
         /></a>
-        <span class="text-slate-500">TRM</span>
-        <a href="./dashboard.html" class="flex items-center justify-start gap-3"
+        <span class="text-[#7A7C87] font-semibold">TRM</span>
+        <a
+          href="./dashboard.html"
+          class="flex items-center justify-start gap-3 text-[#9FA8AF] text-[14px]"
           ><img src="./assets/overview2.svg" alt="home" />Overview</a
         >
         <a
           href="./requestinspectionlist.html"
-          class="flex items-center justify-start gap-3 text-[#FF7A00]"
+          class="flex items-center justify-start gap-3 text-[14px] text-[#FF7A00]"
           ><img src="./assets/requests2.svg" alt="home" />Requests</a
         >
       </div>
@@ -78,15 +81,21 @@
           class="flex justify-between lg:justify-end items-center border-b border-[#EEEEEE]"
         >
           <div class="w-[30px] h-[auto] ml-7 lg:hidden">
-            <img src="./assets/leadway-logo.svg" alt="leadway-logo" />
+            <a href="./dashboard.html">
+              <img src="./assets/leadway-logo.svg" alt="leadway-logo"
+            /></a>
           </div>
 
           <div class="flex items-center justify-end gap-4 p-4">
-            <a href="#"
+            <a href="#" class="w-[20px] h-[20px]"
               ><img src="./assets/notificationbell.svg" alt="home"
             /></a>
-            <a href="#"><img src="./assets/avatar.svg" alt="home" /></a>
-            <span class="">Adesola</span>
+
+            <a href="#" class="w-[24px] h-[24px]"
+              ><img src="./assets/avatar.svg" alt="home"
+            /></a>
+            <span class="text-[12px]">Adesola</span>
+
             <a href="#"><img src="./assets/caret.svg" alt="home" /></a>
 
             <div class="w-[20px] h-[auto] lg:hidden">
@@ -106,17 +115,21 @@
             class="w-full flex flex-col items-start lg:items-center justify-center gap-5 lg:justify-between lg:flex-row"
           >
             <div class="flex flex-col">
-              <h1 class="text-[#34475E] text-xl">Inspection List</h1>
+              <h1 class="text-[#34475E] text-xl font-bold leading-[27px] mb-1">
+                Inspection List
+              </h1>
               <p class="text-[#2F2F2F] text-xs">
                 See Inspections across all business classes
               </p>
             </div>
 
-            <a href="./createNewInspection-property.html">
-              <button class="bg-[#FF7A00] text-white h-9 rounded-sm p-1 px-3">
-                + Create New Inspection
-              </button>
-            </a>
+            <label
+              for="search"
+              class="flex items-center justify-start p-2 border border-[#EEEEEE] bg-[#FFFFFF] rounded-sm gap-2"
+            >
+              <img src="./assets/search.svg" alt="search icon" />
+              <input type="search" class="outline-none" placeholder="search" />
+            </label>
           </div>
 
           <div
@@ -127,48 +140,44 @@
             >
               <button
                 data-target="a"
-                class="toggle-button border px-3 py-1 rounded-md active"
+                class="toggle-button border px-3 py-1 rounded-md active text-[14px] text-[#2F2F2F]"
               >
                 All Requests
               </button>
 
               <button
                 data-target="b"
-                class="toggle-button border px-3 py-1 rounded-md"
+                class="toggle-button border px-3 py-1 rounded-md text-[14px] text-[#2F2F2F]"
               >
                 Ongoing
               </button>
 
               <button
                 data-target="c"
-                class="toggle-button border px-3 py-1 rounded-md"
+                class="toggle-button border px-3 py-1 rounded-md text-[14px] text-[#2F2F2F]"
               >
                 Completed
               </button>
             </div>
             <div
-              class="flex flex-col lg:flex-row items-start justify-center w-full gap-2 lg:items-center lg:justify-start lg:w-auto"
+              class="flex flex-col lg:flex-row items-start justify-center w-full gap-2 lg:gap-6 lg:items-center lg:justify-start lg:w-auto"
             >
-              <label
-                for="search"
-                class="flex items-center justify-start p-2 border border-[#EEEEEE] bg-[#FFFFFF] rounded-sm gap-2"
-              >
-                <img src="./assets//search.svg" alt="search icon" />
-                <input type="search" class="outline-none" />
-              </label>
-
               <div
-                class="bg-[#f3f3f3] border border-[#eeeeee] rounded-md flex items-center justify-between w-full py-2 px-4"
+                class="bg-[#f3f3f3] border border-[#eeeeee] rounded-md flex items-center justify-between w-full py-2 px-4 gap-2"
               >
                 <span class="rounded-full w-2 h-2 bg-[#6941c6]"></span>
-                <p>Marine</p>
-                <img src="./assets/closeinpectionlist.svg" alt="" />
+                <p class="text-[14px] text-[#2F2F2F]">Marine</p>
+                <img
+                  src="./assets/closeinpectionlist.svg"
+                  alt=""
+                  class="mt-1"
+                />
               </div>
 
               <label
-                class="bg-[#ffffff] border border-[#eeeeee] rounded-md flex items-center justify-center w-full text-nowrap p-2"
+                class="bg-[#ffffff] border border-[#eeeeee] rounded-md flex items-center justify-center w-full text-nowrap p-2 text-[14px] text-[#2F2F2F]"
               >
-                Sort by:
+                <span class="text-[#9F9F9F]"> Sort by:</span>
                 <select name="sortby" id="sortby" class="">
                   <option value="class">Class</option>
                 </select>
@@ -953,17 +962,21 @@
       <!-- SIDE BAR 2 -->
       <div
         id="sidebarTwo"
-        class="w-52 hidden flex-col items-start justify-start pt-12 p-5 gap-5 border border-[#EEEEEE] bg-[#fff]"
+        class="w-[180px] hidden flex flex-col items-start justify-start pt-12 p-5 gap-5 border border-[#EEEEEE] bg-[#fff]"
       >
-        <a href="#" class="flex items-center"
+        <a href="./dashboard.html" class="flex items-center"
           ><img src="./assets/logo.png" alt="logo"
         /></a>
         <span class="text-slate-500">TRM</span>
-        <a href="#" class="flex items-center justify-start gap-3 text-[#FF7A00]"
-          ><img src="./assets/overview.svg" alt="home" />Overview</a
+        <a
+          href="./dashboard.html"
+          class="flex items-center justify-start gap-3 text-[14px] text-[#9FA8AF]"
+          ><img src="./assets/overview2.svg" alt="home" />Overview</a
         >
-        <a href="#" class="flex items-center justify-start gap-3"
-          ><img src="./assets/requests.svg" alt="home" />Requests</a
+        <a
+          href="./requestinspectionlist.html"
+          class="flex items-center justify-start gap-3 text-[14px] text-[#FF7A00]"
+          ><img src="./assets/requests2.svg" alt="home" />Requests</a
         >
       </div>
     </div>

@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TRM PORTAL</title>
+    <title>PreLoss Property | Leadway Assurance</title>
+    <link rel="icon" href="./assets/leadway-logo.svg" />
     <link rel="stylesheet" href="./styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="./script/modalCreateNewInspection.js" defer></script>
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -30,7 +30,8 @@
       });
     </script>
     <script src="./script/dashboard.js" defer></script>
-
+    <script src="./script/modalCreateNewInspection.js" defer></script>
+    <!-- <script src="./script/modalInspectionNotification.js" defer></script> -->
     <style>
       .hidden {
         display: none;
@@ -63,13 +64,15 @@
         <a href="#" class="flex items-center"
           ><img src="./assets/logo.png" alt="logo"
         /></a>
-        <span class="text-slate-500">TRM</span>
-        <a href="./dashboard.html" class="flex items-center justify-start gap-3"
+        <span class="text-[#7A7C87] font-semibold">TRM</span>
+        <a
+          href="./dashboard.html"
+          class="flex items-center justify-start gap-3 text-[#9FA8AF] text-[14px]"
           ><img src="./assets/overview2.svg" alt="home" />Overview</a
         >
         <a
           href="./requestinspectionlist.html"
-          class="flex items-center justify-start gap-3 text-[#FF7A00]"
+          class="flex items-center justify-start gap-3 text-[14px] text-[#FF7A00]"
           ><img src="./assets/requests2.svg" alt="home" />Requests</a
         >
       </div>
@@ -80,15 +83,21 @@
           class="flex justify-between lg:justify-end items-center border-b border-[#EEEEEE]"
         >
           <div class="w-[30px] h-[auto] ml-7 lg:hidden">
-            <img src="./assets/leadway-logo.svg" alt="leadway-logo" />
+            <a href="./dashboard.html">
+              <img src="./assets/leadway-logo.svg" alt="leadway-logo"
+            /></a>
           </div>
 
           <div class="flex items-center justify-end gap-4 p-4">
-            <a href="#"
+            <a href="#" class="w-[20px] h-[20px]"
               ><img src="./assets/notificationbell.svg" alt="home"
             /></a>
-            <a href="#"><img src="./assets/avatar.svg" alt="home" /></a>
-            <span class="">Adesola</span>
+
+            <a href="#" class="w-[24px] h-[24px]"
+              ><img src="./assets/avatar.svg" alt="home"
+            /></a>
+            <span class="text-[12px]">Adesola</span>
+
             <a href="#"><img src="./assets/caret.svg" alt="home" /></a>
 
             <div class="w-[20px] h-[auto] lg:hidden">
@@ -105,26 +114,27 @@
         <!-- MAIN DASHBOARD AREA -->
         <div class="flex flex-col p-10 gap-10 overflow-auto bg-[#FDFDFD]">
           <main class="p-4">
-            <div class="mb-10 flex justify-between">
-              <div>
-                <h1 class="text-2xl font-bold text-gray-800">
+            <div class="mb-10 flex justify-between flex-col sm:flex-row">
+              <div class="flex flex-col">
+                <h1 class="text-[#34475E] text-xl font-bold">
                   Create New Inspection
                 </h1>
-                <p class="text-sm text-gray-600">
+                <p class="text-[#2F2F2F] text-xs">
                   See Inspections across all business classes
                 </p>
               </div>
-              <a href="./createNewInspection-property.html">
+
+              <a href="./createNewInspection.html">
                 <button
                   type="button"
                   class="cursor-pointer"
                   onclick="loadPage('../pages/createinspection.html', this)"
                 >
-                  <span class="text-sm text-gray-500 mt-4 inline-block">
-                    <!-- <i class="material-icons" style="font-size: 16px"
-                    >chevron_left</i
-                  > -->
-                    Back to create request
+                  <span
+                    class="text-sm text-[#ACACAC] mt-4 flex items-center gap-3"
+                  >
+                    <div><img src="./assets/left-arrow.svg" alt="" /></div>
+                    <span class="text-[14px]">Back to create request</span>
                   </span>
                 </button>
               </a>
@@ -132,8 +142,8 @@
 
             <!-- Form -->
             <form class="bg-white shadow rounded-lg p-6">
-              <h2 class="text-xl font-semibold mb-4">
-                Post-Loss Inspection - Property
+              <h2 class="font-semibold mb-4 text-[#34475E] text-[18px]">
+                Pre-Loss Inspection - Property
               </h2>
               <hr />
 
@@ -142,7 +152,7 @@
                   class="section1 grid grid-cols-1 md:grid-cols-2 gap-6 mb-6"
                 >
                   <div class="h-20">
-                    <label class="block text-sm font-medium text-gray-700"
+                    <label class="block text-sm font-medium text-[#344054]"
                       >Policy Number (optional)</label
                     >
                     <div
@@ -162,7 +172,7 @@
                     </div>
                   </div>
                   <div class="h-20">
-                    <label class="block text-sm font-medium text-gray-700"
+                    <label class="block text-sm font-medium text-[#344054]"
                       >Claim Number (optional)</label
                     >
                     <div
@@ -182,7 +192,7 @@
                     </div>
                   </div>
                   <div class="h-20">
-                    <label class="block text-sm font-medium text-gray-700"
+                    <label class="block text-sm font-medium text-[#344054]"
                       >Insured For</label
                     >
                     <div
@@ -202,7 +212,7 @@
                     </div>
                   </div>
                   <div class="h-20">
-                    <label class="block text-sm font-medium text-gray-700"
+                    <label class="block text-sm font-medium text-[#344054]"
                       >Assign To</label
                     >
                     <div
@@ -228,7 +238,7 @@
                   class="section2 grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 mt-5"
                 >
                   <div class="h-20">
-                    <label class="block text-sm font-medium text-gray-700"
+                    <label class="block text-sm font-medium text-[#344054]"
                       >Contact First Name</label
                     >
                     <div
@@ -242,7 +252,7 @@
                     </div>
                   </div>
                   <div class="h-20">
-                    <label class="block text-sm font-medium text-gray-700"
+                    <label class="block text-sm font-medium text-[#344054]"
                       >Contact Last Name</label
                     >
                     <div
@@ -256,7 +266,7 @@
                     </div>
                   </div>
                   <div class="h-20">
-                    <label class="block text-sm font-medium text-gray-700"
+                    <label class="block text-sm font-medium text-[#344054]"
                       >Contact Phone Number</label
                     >
                     <div
@@ -278,7 +288,7 @@
                     </div>
                   </div>
                   <div class="h-20">
-                    <label class="block text-sm font-medium text-gray-700"
+                    <label class="block text-sm font-medium text-[#344054]"
                       >Contact Email Address</label
                     >
                     <div
@@ -298,7 +308,7 @@
                   class="section1 grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 mt-10"
                 >
                   <div class="h-20">
-                    <label class="block text-sm font-medium text-gray-700"
+                    <label class="block text-sm font-medium text-[#344054]"
                       >Risk House Number</label
                     >
                     <div
@@ -312,7 +322,7 @@
                     </div>
                   </div>
                   <div class="h-20">
-                    <label class="block text-sm font-medium text-gray-700"
+                    <label class="block text-sm font-medium text-[#344054]"
                       >Risk Address</label
                     >
                     <div
@@ -326,7 +336,7 @@
                     </div>
                   </div>
                   <div class="h-20">
-                    <label class="block text-sm font-medium text-gray-700"
+                    <label class="block text-sm font-medium text-[#344054]"
                       >State</label
                     >
                     <div
@@ -341,7 +351,7 @@
                     </div>
                   </div>
                   <div class="h-20">
-                    <label class="block text-sm font-medium text-gray-700"
+                    <label class="block text-sm font-medium text-[#344054]"
                       >LGA</label
                     >
                     <div
@@ -361,14 +371,14 @@
                 <div class="mt-7">
                   <label
                     for="property-description"
-                    class="block text-sm font-medium text-gray-700"
+                    class="block text-sm font-medium text-[#344054]"
                     >Property description</label
                   >
                   <div class="mt-5 border border-gray-300 rounded-lg p-2">
                     <textarea
                       id="property-description"
                       rows="10"
-                      class="w-full border-none outline-none resize-none text-gray-700"
+                      class="w-full border-none outline-none resize-none text-[#344054]"
                     ></textarea>
                   </div>
                 </div>
@@ -424,17 +434,21 @@
       <!-- SIDE BAR 2 -->
       <div
         id="sidebarTwo"
-        class="w-52 hidden flex-col items-start justify-start pt-12 p-5 gap-5 border border-[#EEEEEE] bg-[#fff]"
+        class="w-[180px] hidden flex flex-col items-start justify-start pt-12 p-5 gap-5 border border-[#EEEEEE] bg-[#fff]"
       >
-        <a href="#" class="flex items-center"
+        <a href="./dashboard.html" class="flex items-center"
           ><img src="./assets/logo.png" alt="logo"
         /></a>
         <span class="text-slate-500">TRM</span>
-        <a href="#" class="flex items-center justify-start gap-3 text-[#FF7A00]"
-          ><img src="./assets/overview.svg" alt="home" />Overview</a
+        <a
+          href="./dashboard.html"
+          class="flex items-center justify-start gap-3 text-[14px] text-[#9FA8AF]"
+          ><img src="./assets/overview2.svg" alt="home" />Overview</a
         >
-        <a href="#" class="flex items-center justify-start gap-3"
-          ><img src="./assets/requests.svg" alt="home" />Requests</a
+        <a
+          href="./requestinspectionlist.html"
+          class="flex items-center justify-start gap-3 text-[14px] text-[#FF7A00]"
+          ><img src="./assets/requests2.svg" alt="home" />Requests</a
         >
       </div>
     </div>
@@ -490,15 +504,17 @@
         <div class="flex justify-center gap-3 text-[14px]">
           <a href="./requestinspectionlist.html">
             <button
-              class="close-modal rounded-[4px] h-9 border border-[#9FA8AF] px-3"
+              class="close-modal rounded-[4px] border border-[#9FA8AF] px-2 md:px-3 h-9 text-[11px] sm:text-[14px] md:text-[16px]"
               type="button"
             >
               Go to request list
             </button>
           </a>
 
-          <a href="./createNewInspection-property.html">
-            <button class="bg-[#FF7A00] text-white h-9 rounded-[4px] p-1 px-3">
+          <a href="./createNewInspection.html">
+            <button
+              class="bg-[#FF7A00] text-white h-9 rounded-[4px] px-2 md:px-3 text-[11px] sm:text-[14px] md:text-[16px]"
+            >
               Create new inspection
             </button>
           </a>
