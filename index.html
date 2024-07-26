@@ -18,7 +18,7 @@
         >
           <!-- LEFT SIDE CONTAINER -->
           <div
-            class="max-sm:mt-[-30px] max-md:mt-[-50px] w-full max-w-md space-y-8 px-4 text-gray-600 sm:px-0"
+            class="max-sm:mt-[-30px] max-md:mt-[-50px] w-full max-w-md xl:max-w-lg space-y-8 px-4 text-gray-600 sm:px-0"
           >
             <!-- LOGO -->
             <div
@@ -34,13 +34,15 @@
 
             <!-- HEADING -->
             <div class="relative">
-              <div class="mb-[30px] sm:mb-[50px]">
+              <div class="mb-[30px]">
                 <h1
-                  class="font-bold text-[22px] text-[#585858] sm:text-[24px] md:text-[26px] lg:text-[28px] xl:text-[30px] 2xl:text-[32px]"
+                  class="font-bold text-[22px] text-[#585858] sm:text-[26px] md:text-[30px] lg:text-[34px] xl:text-[38px] 2xl:text-[40px]"
                 >
                   Underwriter Dashboard
                 </h1>
-                <p class="text-[13px] text-[#AFB0B1]">
+                <p
+                  class="text-[13px] sm:text-[15px] md:text-[17px] lg:text-[18px] xl:text-[19px] 2xl:text-[20px] text-[#AFB0B1]"
+                >
                   Welcome. Login to your portal account.
                 </p>
               </div>
@@ -51,14 +53,18 @@
               <div
                 class="bg-[#fff] pl-[20px] pr-[20px] pb-[8px] pt-[5px] rounded-[5px] box-shadow"
               >
-                <label for="loginId" class="text-[14px]">Login ID</label>
+                <label
+                  for="loginId"
+                  class="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px]"
+                  >Login ID</label
+                >
                 <div class="flex justify-between mt-[8px]">
                   <input
                     type="text"
                     name="loginId"
                     id="loginId"
                     placeholder="enter your login ID"
-                    class="text-[12px] no-border-on-focus w-[100%]"
+                    class="text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px] no-border-on-focus w-[100%]"
                   />
                   <div class="w-[10px] h-[10px]">
                     <img src="./assets/user-icon.svg" alt="user icon" />
@@ -69,9 +75,13 @@
                 class="bg-[#fff] pl-[20px] pr-[20px] pb-[8px] pt-[15px] rounded-[5px] box-shadow"
               >
                 <div class="flex justify-between">
-                  <label for="password" class="text-[14px]">Password</label>
+                  <label
+                    for="password"
+                    class="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px]"
+                    >Password</label
+                  >
                   <span
-                    class="text-[9px] text-[#EE5331] font-bold mr-[-6px] cursor-pointer"
+                    class="text-[9px] sm:text-[10px] text-[#EE5331] font-bold mr-[-6px] cursor-pointer"
                     >SHOW</span
                   >
                 </div>
@@ -81,7 +91,7 @@
                     name="password"
                     id="password"
                     placeholder="enter your password"
-                    class="text-[12px] no-border-on-focus w-[100%]"
+                    class="text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px] no-border-on-focus w-[100%]"
                   />
                   <div class="w-[10px] h-[10px]">
                     <img src="./assets/lock-icon.svg" alt="lock icon" />
@@ -92,13 +102,19 @@
                 class="flex justify-between text-[#7F8B94]"
                 style="margin-bottom: 15px"
               >
-                <span class="text-[10px] ml-[15px]">Keep me logged in</span>
-                <span class="text-[10px] cursor-pointer">Reset Password</span>
+                <span
+                  class="text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[20px] ml-[15px]"
+                  >Keep me logged in</span
+                >
+                <span
+                  class="text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[20px] cursor-pointer"
+                  >Reset Password</span
+                >
               </div>
               <a href="./dashboard.html">
                 <button
                   type="button"
-                  class="bg-[#FF7A00] w-full text-white pt-[10px] pb-[10px] rounded-[3px] text-[16px] login-box-shadow"
+                  class="bg-[#FF7A00] w-full text-white pt-[10px] pb-[10px] rounded-[3px] text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px] 2xl:text-[28px] login-box-shadow"
                 >
                   Login
                 </button>
