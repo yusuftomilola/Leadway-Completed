@@ -27,11 +27,6 @@
               <img src="./assets/leadway-logo.svg" alt="leadway logo" />
             </div>
 
-            <!-- Background Image -->
-            <!-- <div
-              class="mobile-background sm:hidden w-[full] h-[110px] ml-[-150px] mr-[-150px] mb-[20px]"
-            ></div> -->
-
             <!-- HEADING -->
             <div class="relative">
               <div class="mb-[30px]">
@@ -49,7 +44,7 @@
             </div>
 
             <!-- FORM -->
-            <form onSubmit="event.preventDefault()" class="space-y-5">
+            <form id="loginForm" class="space-y-5">
               <div
                 class="bg-[#fff] pl-[20px] pr-[20px] pb-[8px] pt-[5px] rounded-[5px] box-shadow"
               >
@@ -81,6 +76,7 @@
                     >Password</label
                   >
                   <span
+                    id="togglePassword"
                     class="text-[9px] sm:text-[10px] text-[#EE5331] font-bold mr-[-6px] cursor-pointer"
                     >SHOW</span
                   >
@@ -111,17 +107,16 @@
                   >Reset Password</span
                 >
               </div>
-              <a href="./dashboard.html">
-                <button
-                  type="button"
-                  class="bg-[#FF7A00] w-full text-white pt-[10px] pb-[10px] rounded-[3px] text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px] 2xl:text-[28px] login-box-shadow"
-                >
-                  Login
-                </button>
-              </a>
+              <button
+                type="submit"
+                class="bg-[#FF7A00] w-full text-white pt-[10px] pb-[10px] rounded-[3px] text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px] 2xl:text-[28px] login-box-shadow"
+              >
+                Login
+              </button>
             </form>
           </div>
         </div>
+
         <!-- Information Container -->
         <div
           class="relative flex-1 hidden items-center justify-center h-screen lg:flex bg-svg-background"
@@ -171,5 +166,52 @@
         </div>
       </div>
     </main>
+
+    <script>
+      const passwordInput = document.getElementById("password");
+      const togglePassword = document.getElementById("togglePassword");
+
+      // Toggle password visibility
+      togglePassword.addEventListener("click", () => {
+        const type =
+          passwordInput.getAttribute("type") === "password"
+            ? "text"
+            : "password";
+        passwordInput.setAttribute("type", type);
+        togglePassword.textContent = type === "password" ? "SHOW" : "HIDE";
+      });
+
+      // const loginForm = document.getElementById("loginForm");
+      // const loginIdInput = document.getElementById("loginId");
+
+      // Form validation
+      // loginForm.addEventListener("submit", (event) => {
+      //   event.preventDefault(); // Prevent form submission
+
+      //   const loginId = loginIdInput.value.trim();
+      //   const password = passwordInput.value.trim();
+      //   let isValid = true;
+
+      // Reset border colors
+      // loginIdInput.style.borderColor = "";
+      // passwordInput.style.borderColor = "";
+
+      // Check if both fields are filled and correct
+      // if (loginId !== "admin" || password !== "admin") {
+      //   isValid = false;
+      //   if (loginId !== "admin") {
+      //     loginIdInput.style.borderColor = "red";
+      //   }
+      //   if (password !== "admin") {
+      //     passwordInput.style.borderColor = "red";
+      //   }
+      // }
+
+      // if (isValid) {
+      //   // Redirect to the dashboard page
+      //   window.location.href = "./dashboard.html";
+      // }
+      // });
+    </script>
   </body>
 </html>
